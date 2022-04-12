@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "Inconsolota";
+  src: url("assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf");
+}
+@font-face {
+    font-family: "Pompiere";
+    src: url("assets/fonts/Pompiere-Regular.ttf");
+}
+:root {
+    scrollbar-width: thin;
+    scrollbar-color: #969597 #ffffff;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 3vh;
+  color: whitesmoke;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#hoard {
+  font-family: "Pompiere";    
+  margin-left: 0;
+  margin-right: auto;
+  font-size: 2vw;
+  font-weight: bolder;
+  text-transform: none;
+  color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 10vh;
+  font-size: 1.1vw;
+  margin: 1vw 1.5vw;
+  box-shadow: 0vh 1vh 2vh -1.5vh #7b7b7b;
+  border-radius: 1vh;
+  background-color: #ffffff;
+}
+
+.navbar a:visited,
+.navbar a:link {
+  color: rgb(106, 117, 130);
+  background-color: transparent;
+  margin-right: 3vw;
+}
+.navbar a:hover {
+  background-image: linear-gradient(45deg, #000000, #36dbe0);
+  background-clip: text;
+  color: transparent;
+  transition: ease-out 1s;
+}
+#logo,
+img {
+  width: 8vh;
+  margin-top: 0.09vw;
+  margin-left: 0.5vw;
+  padding-right: 1vw;
+  margin-right: 0;
+}
+
+.flexcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7vh;
+}
+
+.flexitem {
+  margin-bottom: 3.5vh;
+  max-width: 40vw;
+  width: 40vw;
+  overflow-wrap: break-word;
+  justify-items: left;
+  background-color: rgb(255, 255, 255);
+  padding: 1vh 3vh 1vh 3vh;
+  box-shadow: 1vh 1vh 2vh -1.5vh #7b7b7b;
+  color: #000000;
+}
+.flexitem:nth-child(-n + 10) {
+  animation: ea 1s;
+}
+.field {
+  color: rgb(45, 164, 214);
+}
+details {
+  font-family: "Inconsolota";
+  border-radius: 0.3vw;
+  transition: ease-out 0.5s;
+}
+details summary {
+  cursor: pointer;
+  display: block;
+  transition: ease-out 0.5s;
+}
+details[open] {
+  transition: ease-out 0.5s;
+}
+details[open] summary {
+  margin-bottom: 2vh;
+  cursor: pointer;
+  font-weight: bold;
+  transition: ease-out 0.5s;
+}
+@keyframes ea {
+  from {
+    opacity: 0;
+    translate: 0 -3vh;
+  }
+  to {
+    opacity: 1;
+    translate: 0;
+  }
+}

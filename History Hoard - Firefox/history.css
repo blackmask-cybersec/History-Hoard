@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Pompiere";
+  src: url("assets/fonts/Pompiere-Regular.ttf");
+}
+@font-face {
+  font-family: "Inconsolota";
+  src: url("assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf");
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inconsolota", sans-serif;
+  font-size: 3vh;
+  color: black;
+}
+.cen {
+  margin-top: 10vh;
+  margin-left: 30vw;
+  width: 40vw;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#hoard {
+  font-family: "Pompiere";    
+  margin-left: 0;
+  margin-right: auto;
+  font-size: 2vw;
+  font-weight: bolder;
+  text-transform: none;
+  color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 10vh;
+  font-size: 1.1vw;
+  margin: 1vw 1.5vw;
+  box-shadow: 0vh 1vh 2vh -1.5vh #7b7b7b;
+  border-radius: 1vh;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar a:visited,
+.navbar a:link {
+  color: rgb(106, 117, 130);
+  background-color: transparent;
+  margin-right: 3vw;
+}
+.navbar a:hover {
+  background-image: linear-gradient(45deg, #000000, #36dbe0);
+  background-clip: text;
+  color: transparent;
+  transition: ease-out 1s;
+}
+#logo,
+img {
+  width: 8vh;
+  margin-top: 0.09vw;
+  margin-left: 0.5vw;
+  padding-right: 1vw;
+  margin-right: 0;
+}
+
+.btn {
+  font-family: "Poppins", sans-serif;
+  padding: 1vw 2vw;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 3vh;
+  box-shadow: 0vh 0.5vh 1vh rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+ }
+ 
+.btn:hover {
+  background-color: #36DBE0;
+  box-shadow: 0vh 1vh 1vh rgba(24, 102, 102, 0.4);
+  color: #fff;
+  transform: translateY(-0.5vh);
+ }
+ 
+.btn:active {
+  transform: translateY(-0.2vh);
+ }
+
+#center-export {
+  margin-top: 20vh;
+  margin-left: 20vw;
+}
+#populate {
+  margin-top: 25vh;
+  margin-left: 45vw;
+}
+#contactbox {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  margin-top: 28vh;
+  margin-left: 38vw;
+}
+.contact {
+  text-align: left;
+}

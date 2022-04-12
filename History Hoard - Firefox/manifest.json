@@ -1,0 +1,22 @@
+{
+    "name": "History Hoard",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Persistent Storage for each URL Visit",
+    "permissions": ["history", "unlimitedStorage", "downloads"],
+    "background": {
+        "scripts": ["background.js"]
+      },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "assets/icons/H128.png",
+        "default_title": "History Hoard"
+    },
+    "icons": {
+        "16":"assets/icons/H16.png",
+        "32":"assets/icons/H32.png",
+        "48":"assets/icons/H48.png",
+        "128":"assets/icons/H128.png"
+    }
+}
+    
