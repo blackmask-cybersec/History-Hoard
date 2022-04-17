@@ -56,7 +56,7 @@ a {
 .navbar a:hover {
   background-image: linear-gradient(45deg, #000000, #36dbe0);
   -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   transition: ease-out 1s;
 }
 #logo,
@@ -98,7 +98,7 @@ img {
   margin-top: 20vh;
   margin-left: 20vw;
 }
-#populate {
+#populating {
   margin-top: 25vh;
   margin-left: 45vw;
 }

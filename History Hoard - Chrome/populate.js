@@ -9,6 +9,10 @@ function populate() {
     }
 
     openRequest.onsuccess = function() {
+        let x = document.getElementById("populating")
+        let popDBMessage = document.createElement("div")
+        popDBMessage.innerHTML = "Populating DB..."
+        x.appendChild(popDBMessage)
         let db = openRequest.result
         chrome.history.search({text: "", startTime: 0, maxResults: 2147483647}, function(listOfURLs) {
             for(i=0; i < listOfURLs.length; i++) {
@@ -45,6 +49,10 @@ function populate() {
                     }
                 }
             }
+            let x = document.getElementById("populating")
+            let doneMessage = document.createElement("div")
+            doneMessage.innerHTML = "Done."
+            x.appendChild(doneMessage)
         })
     }
 }

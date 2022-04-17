@@ -41,6 +41,8 @@ function exportHistoryTimeStamp() {
                     let timeStamp = new Date(cursor.value.Visits[i])
                     hVis.push(timeStamp.toString())
                 }
+                let lastTimeStamp = new Date(cursor.value.LatestVisit)
+                cursor.value.LatestVisit = lastTimeStamp.toString()
                 cursor.value.Visits = hVis
                 historyArray.push(cursor.value)
                 cursor.continue()
@@ -73,7 +75,7 @@ function exportHistoryJSON() {
                 let historyString = JSON.stringify(historyArray)
                 let blob = new Blob([historyString], {type: "application/json"})
                 let exportURL = URL.createObjectURL(blob)
-                chrome.downloads.download({url: exportURL, saveAs: true, filename: "History-Hoard.txt"})
+                chrome.downloads.download({url: exportURL, saveAs: true, filename: "History-Hoard.json"})
             }
         }
     }
@@ -97,6 +99,8 @@ function exportHistoryTimeStampJSON() {
                     let timeStamp = new Date(cursor.value.Visits[i])
                     hVis.push(timeStamp.toString())
                 }
+                let lastTimeStamp = new Date(cursor.value.LatestVisit)
+                cursor.value.LatestVisit = lastTimeStamp.toString()
                 cursor.value.Visits = hVis
                 historyArray.push(cursor.value)
                 cursor.continue()
@@ -104,7 +108,7 @@ function exportHistoryTimeStampJSON() {
                 let historyString = JSON.stringify(historyArray)
                 let blob = new Blob([historyString], {type: "application/json"})
                 let exportURL = URL.createObjectURL(blob)
-                chrome.downloads.download({url: exportURL, saveAs: true, filename: "History-Hoard.txt"})
+                chrome.downloads.download({url: exportURL, saveAs: true, filename: "History-Hoard.json"})
             }
         }
     }

@@ -1,0 +1,23 @@
+{
+    "name": "History Hoard",
+    "version": "1.1",
+    "manifest_version": 3,
+    "description": "Keep your browsing history forever.",
+    "permissions": ["history", "downloads", "unlimitedStorage"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "assets/icons/H128.png",
+        "default_title": "History Hoard"
+    },
+    "icons": {
+        "16":"assets/icons/H16.png",
+        "32":"assets/icons/H32.png",
+        "48":"assets/icons/H48.png",
+        "128":"assets/icons/H128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx"
+}
+    
