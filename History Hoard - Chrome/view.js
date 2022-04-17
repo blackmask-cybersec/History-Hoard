@@ -1,6 +1,12 @@
 function displayData() {
     let d = document.getElementById("mains")
     let openRequest = indexedDB.open("HoardDB")
+    openRequest.onupgradeneeded = function() {
+        let db = openRequest.result
+        let store = db.createObjectStore("HoardOS", {keyPath: "URL"})
+        store.createIndex("LatestVisitIDX", "LatestVisit", {unique: false})
+        store.createIndex("TitleIDX", "Title", {unique: false})
+    }
     openRequest.onsuccess = function() {
         let db = openRequest.result
         let tx = db.transaction("HoardOS", "readonly")
