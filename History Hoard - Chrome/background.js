@@ -11,7 +11,7 @@ chrome.runtime.onStartup.addListener(function() {
     openRequest.onsuccess = function() {
         let db = openRequest.result
         chrome.history.search({text: "", startTime: 0, maxResults: 2500}, function(listOfURLs) {
-            for(i = 0; i < listOfURLs.length; i++) {
+            for(let i = 0; i < listOfURLs.length; i++) {
                 let URLHoard = listOfURLs[i].url
                 let title = listOfURLs[i].title
                 let lastVisit = listOfURLs[i].lastVisitTime
