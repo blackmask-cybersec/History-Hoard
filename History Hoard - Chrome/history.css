@@ -112,3 +112,20 @@ img {
 .contact {
   text-align: left;
 }
+#in {
+  margin-top: 15vh;
+  margin-left: 26vw;
+}
+#upload {
+  margin-top: 7vh;
+  margin-left: 40vw;
+}
+#output {
+  margin-left: 32vw;
+}
+#importing {
+  margin-left: 47vw;
+}
+#done {
+  margin-left: 49.5vw;
+}
