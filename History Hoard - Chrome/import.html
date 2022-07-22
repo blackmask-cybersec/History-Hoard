@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="view.css">
-    <title>History Hoard</title>
+    <link rel="stylesheet" href="history.css">
+    <title>History Hoard - Import</title>
 </head>
 <body>
     <div class="navbar">
@@ -19,10 +19,11 @@
         <a href="export.html" class="navbaritem">Export</a>
         <a href="contact.html" class="navbaritem">Contact</a>
     </div>
-    <script src="view.js"></script>
-    <div class="bg"></div>
-    <div class="flexcontainer" id="mains">
-        
-    </div>
+    <script src="import.js"></script>
+    <p id="in">Upload file with UNIX Time values exported from old device (.json,.txt)</p>
+    <input type="file" id="upload" accept=".json,.txt" class="btn">
+    <p id="output"></p>
+    <p id="importing"></p>
+    <p id="done"></p>
 </body>
 </html>

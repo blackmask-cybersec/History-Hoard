@@ -6,10 +6,7 @@
     font-family: "Pompiere";
     src: url("assets/fonts/Pompiere-Regular.ttf");
 }
-:root {
-    scrollbar-width: thin;
-    scrollbar-color: #969597 #ffffff;
-}
+
 body {
   margin: 0;
   padding: 0;
