@@ -39,19 +39,31 @@ function populate() {
                         getResult.LatestVisit = lastVisit
                         let tx1 = db.transaction("HoardOS", "readwrite")
                         let store1 = tx1.objectStore("HoardOS")
-                        store1.put(getResult)
+                        let a = store1.put(getResult)
+                        if (i == listOfURLs.length - 1) {
+                            a.onsuccess = function() {
+                                let x = document.getElementById("populating")
+                                let doneMessage = document.createElement("div")
+                                doneMessage.innerHTML = "Done."
+                                x.appendChild(doneMessage)
+                            }
+                        }
                     } else {
                         let tx1 = db.transaction("HoardOS", "readwrite")
                         let store1 = tx1.objectStore("HoardOS")
-                        store1.add({URL: URLHoard, Title: title, LatestVisit: lastVisit, Visits: URLVisits})
+                        let b = store1.add({URL: URLHoard, Title: title, LatestVisit: lastVisit, Visits: URLVisits})
+                        if (i == listOfURLs.length - 1) {
+                            b.onsuccess = function() {
+                                let x = document.getElementById("populating")
+                                let doneMessage = document.createElement("div")
+                                doneMessage.innerHTML = "Done."
+                                x.appendChild(doneMessage)
+                            }
+                        }
                     }
                 }
                 })
             }
-            let x = document.getElementById("populating")
-            let doneMessage = document.createElement("div")
-            doneMessage.innerHTML = "Done."
-            x.appendChild(doneMessage)
         })
     }
 }
